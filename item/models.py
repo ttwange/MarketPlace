@@ -12,4 +12,5 @@ class Category(models.Model):
         return self.name
 
 class Items(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=255)
+    description = 
