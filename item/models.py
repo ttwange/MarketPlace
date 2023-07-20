@@ -13,4 +13,4 @@ class Category(models.Model):
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
-    description = 
+    description = models.TextField(blank=True, null=True)
