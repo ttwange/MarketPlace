@@ -24,3 +24,6 @@ class Items(models.Model):
 
     class Meta:
         verbose_name_plural = 'Items'
+
+    def __str__(self):
+        return self.name
