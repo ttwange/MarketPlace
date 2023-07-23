@@ -13,6 +13,6 @@ def contact(request):
     return render(request, 'core/contact.html')
 
 def signup(request):
-    form =  SignupForm
+    form =  SignupForm()
     context = {'form':form}
-    return render(request, 'core/signup.html')
+    return render(request, 'core/signup.html', context)
