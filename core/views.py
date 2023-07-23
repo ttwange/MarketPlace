@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from item.models import Category,Items
+
+from . forms import SignupForm
 # Create your views here.
 def index(request):
     items = Items.objects.filter(is_sold=False)
