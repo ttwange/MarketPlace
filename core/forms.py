@@ -13,3 +13,6 @@ class SignupForm(UserCreationForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={
         'placeholder':'Email Address', 'class':'w-full py-4 px-6 rounded-xl'
     }))
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={
+        'placeholder':'Password', 'class':'w-full py-4 px-6 rounded-xl'
+    }))
