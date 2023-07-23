@@ -28,7 +28,7 @@ class NewItemForm(forms.ModelForm):
         }
 
 
-class NewItemForm(forms.ModelForm):
+class EditItemForm(forms.ModelForm):
     class Meta:
         model = Items
         fields = ('name','description','price','image')
