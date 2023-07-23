@@ -16,3 +16,6 @@ class SignupForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'placeholder':'Password', 'class':'w-full py-4 px-6 rounded-xl'
     }))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={
+        'placeholder':'Confrim Password', 'class':'w-full py-4 px-6 rounded-xl'
+    }))
