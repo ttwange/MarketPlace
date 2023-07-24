@@ -4,6 +4,12 @@ from .models import Items
 from .forms import NewItemForm,EditItemForm
 
 # Create your views here.
+def items(request):
+    items = Items.objects.filter(is_sold=False)
+    context = {'items':items}
+    return render(request,'item/items.html',context)
+
+
 def detail(request, pk):
     item = get_object_or_404(Items, pk=pk)
     related_items = Items.objects.filter(category=item.category, is_sold=False).exclude(pk=pk)[0:3]
