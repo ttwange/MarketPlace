@@ -7,6 +7,7 @@ from .forms import NewItemForm,EditItemForm
 # Create your views here.
 def items(request):
     query = request.GET.get('query','')
+    category_id = request.GET.get('category_id',0)
     items = Items.objects.filter(is_sold=False)
     categories = Category.objects.all()
     if query:
