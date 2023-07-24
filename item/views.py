@@ -7,7 +7,9 @@ from .forms import NewItemForm,EditItemForm
 def items(request):
     query = request.GET.get('query','')
     items = Items.objects.filter(is_sold=False)
-    context = {'items':items}
+    if query:
+        items = items.filter(name__icontains = query)
+    context = {'items':items,'query':query}
     return render(request,'item/items.html',context)
 
 
