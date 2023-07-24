@@ -5,6 +5,7 @@ from .forms import NewItemForm,EditItemForm
 
 # Create your views here.
 def items(request):
+    query = request.GET.get('query','')
     items = Items.objects.filter(is_sold=False)
     context = {'items':items}
     return render(request,'item/items.html',context)
