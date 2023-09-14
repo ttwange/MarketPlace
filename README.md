@@ -1,4 +1,4 @@
-# Django M Project
+# Django Marketplace Project
 
 This Django marketplace project is a basic yet essential application for managing customer data. As an administrator, you have full control to perform CRUD (Create, Read, Update, Delete) operations on customer records. This project serves as a foundation for building more advanced Marketplace systems tailored to specific business needs.
 
